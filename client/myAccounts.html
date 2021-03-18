@@ -1,34 +1,16 @@
 <template name="myAccounts">
     <div class="row justify-content-around">
-        <div class="col-lg-3">
-            <div class="pro-frame">
-                <div class="p-frame">
-                    <img src="blankprofile.png" alt="generic image">
-                </div>
-                <div class="myInfo">
-                    <p class="fs-4">Dark Brad, Lv999</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3">
-            <div class="pro-frame">
-                <div class="p-frame">
-                    <img src="blankprofile.png" alt="generic image">
-                </div>
-                <div class="myInfo">
-                    <p class="fs-4">Dark Brad, Lv999</p>
+        {{#each theProfiles}}
+            <div class="col-lg-4">
+                <div class="pro-frame">
+                    <div class="p-frame">
+                        <img src="blankprofile.png" alt="generic image">
+                    </div>
+                    <div class="myInfo">
+                        <p class="fs-4">{{pFirst}}, {{pLast}}, {{pAge}}</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-lg-3">
-            <div class="pro-frame">
-                <div class="p-frame">
-                    <img src="blankprofile.png" alt="generic image">
-                </div>
-                <div class="myInfo">
-                    <p class="fs-4">Dark Brad, Lv999</p>
-                </div>
-            </div>
-        </div>
+        {{/each}}    
     </div>
 </template>
