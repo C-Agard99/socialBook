@@ -4,10 +4,14 @@
             <div class="col-lg-4">
                 <div class="pro-frame">
                     <div class="p-frame">
+                        {{#if pPic}}
+                        <img src ={{pPic}} alt="Image for Profile">
+                        {{else}}
                         <img src="blankprofile.png" alt="generic image">
+                        {{/if}}
                     </div>
                     <div class="myInfo">
-                        <p class="fs-4">{{pFirst}}, {{pLast}}, {{pAge}}</p>
+                        <p class="fs-4">{{pFirst}} {{pLast}} Lv{{pAge}}</p>
                     </div>
                 </div>
             </div>
