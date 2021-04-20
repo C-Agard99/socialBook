@@ -5,6 +5,7 @@ Template.addProfile.events({
         let profFirst = $('#firstName').val();
         let profLast = $('#lastName').val();
         let profAge = $('#age').val();
+        
         //save data into collection
         profilesdb.insert({
             "pPic":profPic,
@@ -18,5 +19,9 @@ Template.addProfile.events({
         $('#lastName').val("");
         $('#age').val("");
         $('#addModal').modal('hide');
-    }
+    },
+    'input #profPic'(event){
+        let profPic = $('#profPic').val();
+        document.getElementById("preImg").src = profPic;
+       }
 });

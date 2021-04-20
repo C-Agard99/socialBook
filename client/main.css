@@ -6,3 +6,7 @@ body {
 p-frame img{
     width: 100%;
 }
+
+.previewImg img{
+    width: 60%;
+}

@@ -10,3 +10,4 @@ import './addProfile.html';
 import '../lib/collection.js';
 import './myAccounts.js';
 import './addProfile.js';
+import './confirmDel.html';

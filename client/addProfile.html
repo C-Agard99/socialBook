@@ -1,5 +1,5 @@
 <template name="addProfile">
-    <div class="row justify-content-around">
+    <div class="row justify-content-around mb-3">
         <div class="col-lg-6 text-center">
            <!-- Button trigger modal -->
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal">
@@ -17,38 +17,36 @@
                 </div>
                 <div class="modal-body">
                     <div class="addData">
+                        <div class="previewImg text-center">
+                            <img id="preImg" src="blankprofile.png" alt="">
+                        </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="profImgLabel">Image Path</span>
                             <input type="text" class="form-control" id="profPic" placeholder="Path to imge" aria-label="Profile Image" aria-describedby="profImgLabel">
-                          </div>
+                        </div>
 
-                          <div class="input-group mb-3">
+                        <div class="input-group mb-3">
                             <span class="input-group-text" id="fnameLabel">First Name</span>
                             <input type="text" class="form-control" id="firstName" placeholder="First Name" aria-label="First name" aria-describedby="fnameLabel">
-                          </div>
+                        </div>
 
-                          <div class="input-group mb-3">
+                        <div class="input-group mb-3">
                             <span class="input-group-text" id="lnameLabel">Last Name</span>
                             <input type="text" class="form-control" id="lastName" placeholder="Last Name" aria-label="Last name" aria-describedby="lnameLabel">
-                          </div>
+                        </div>
 
-                          <div class="input-group mb-3">
+                        <div class="input-group mb-3">
                             <span class="input-group-text" id="cAgeLabel">Current Age</span>
                             <input type="text" class="form-control" id="age" placeholder="Current Age" aria-label="Current Age" aria-describedby="cAgeLabel">
-                          </div>
-
-                        <input type="text" id="profPic" placeholder="Pathto image">
-                        <input type="text" id="firstName" placeholder="First Name">
-                        <input type="text" id="lastName" placeholder="Last Name">
-                        <input type="text" id="age" placeholder="Current Age">
+                        </div>   
                     </div>
                 </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary js-save" >Save changes</button>
                     </div>
-                </div>
             </div>
         </div>
+    </div>
 
 </template>
