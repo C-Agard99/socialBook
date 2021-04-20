@@ -5,20 +5,35 @@ Template.addProfile.events({
         let profFirst = $('#firstName').val();
         let profLast = $('#lastName').val();
         let profAge = $('#age').val();
-        
-        //save data into collection
-        profilesdb.insert({
-            "pPic":profPic,
-            "pFirst":profFirst,
-            "pLast":profLast,
-            "pAge":profAge
-        });
-        //clear input boxes
-        $('#profPic').val("");
-        $('#firstName').val("");
-        $('#lastName').val("");
-        $('#age').val("");
-        $('#addModal').modal('hide');
+        //reset each input box
+        $("#profPic").removeClass("invalidWarn");
+        $("#firstName").removeClass("invalidWarn");
+        $("#lastName").removeClass("invalidWarn");
+        $("#age").removeClass("invalidWarn");
+        if (profPic == "")
+            $("#profPic").addClass("invalidWarn");
+        else if (profFirst == "")
+            $("#firstName").addClass("invalidWarn");
+        else if (profLast == "")
+            $("#lastName").addClass("invalidWarn");
+        else if(profAge == "")
+            $("#age").addClass("invalidWarn");
+        else{
+            //save data into collection
+            profilesdb.insert({
+                "pPic":profPic,
+                "pFirst":profFirst,
+                "pLast":profLast,
+                "pAge":profAge
+            });
+            //clear input boxes
+            document.getElementById("preImg").src = "blankprofile.png";
+            $('#profPic').val("");
+            $('#firstName').val("");
+            $('#lastName').val("");
+            $('#age').val("");
+            $('#addModal').modal('hide');
+        }
     },
     'input #profPic'(event){
         let profPic = $('#profPic').val();

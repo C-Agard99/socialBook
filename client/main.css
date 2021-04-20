@@ -10,3 +10,7 @@ p-frame img{
 .previewImg img{
     width: 60%;
 }
+
+.invalidWarn{
+    border: 2px solid #dc3545 !important;
+}
