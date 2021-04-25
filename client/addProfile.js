@@ -5,6 +5,7 @@ Template.addProfile.events({
         let profFirst = $('#firstName').val();
         let profLast = $('#lastName').val();
         let profAge = $('#age').val();
+        let profGen = $('input[name="genderRadio"]:checked').val();
         //reset each input box
         $("#profPic").removeClass("invalidWarn");
         $("#firstName").removeClass("invalidWarn");
@@ -24,7 +25,8 @@ Template.addProfile.events({
                 "pPic":profPic,
                 "pFirst":profFirst,
                 "pLast":profLast,
-                "pAge":profAge
+                "pAge":profAge,
+                "pGen":progGen
             });
             //clear input boxes
             document.getElementById("preImg").src = "blankprofile.png";
