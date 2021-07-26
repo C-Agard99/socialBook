@@ -4,7 +4,11 @@
 
 <body>
     <div class="container">
-        {{> addProfile}}
+        {{> atForm}}
+        {{#if currentUser}}
+            {{> addProfile}}
+        {{/if}}
+        {{> profFilter}}
         {{> myAccounts}}
     </div>
 </body>

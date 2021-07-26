@@ -6,27 +6,39 @@ Template.addProfile.events({
         let profLast = $('#lastName').val();
         let profAge = $('#age').val();
         let profGen = $('input[name="genderRadio"]:checked').val();
+        
         //reset each input box
+        let formGood = true;
         $("#profPic").removeClass("invalidWarn");
         $("#firstName").removeClass("invalidWarn");
         $("#lastName").removeClass("invalidWarn");
         $("#age").removeClass("invalidWarn");
-        if (profPic == "")
+        if (profPic == ""){
             $("#profPic").addClass("invalidWarn");
-        else if (profFirst == "")
+            formGood = false;
+        }
+        if (profFirst == ""){
             $("#firstName").addClass("invalidWarn");
-        else if (profLast == "")
+            formGood = false;
+        }
+        if (profLast == ""){
             $("#lastName").addClass("invalidWarn");
-        else if(profAge == "")
+            formGood = false;
+        }
+        if(profAge == ""){
             $("#age").addClass("invalidWarn");
-        else{
+            formGood = false;
+        }
+        if (formGood == true){
+            
             //save data into collection
             profilesdb.insert({
                 "pPic":profPic,
                 "pFirst":profFirst,
                 "pLast":profLast,
                 "pAge":profAge,
-                "pGen":progGen
+                "pGen":profGen,
+                "pOwn":Meteor.userId()
             });
             //clear input boxes
             document.getElementById("preImg").src = "blankprofile.png";

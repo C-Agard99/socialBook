@@ -1,11 +1,7 @@
 <template name="confirmDel">
-    <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Launch demo modal
-  </button>
-  
+
   <!-- Modal -->
-<div class="modal fade" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"  aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="confirmModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"  aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -13,8 +9,8 @@
                 <input type="hidden" id="confirmID">
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger js-confirmDel" data-bs-dismiss="modal">Yes</button>
-                <button type="button" class="btn btn-secondary">No</button>
+                <button type="button" class="btn btn-danger js-confirmDel" >Yes</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
             </div>
         </div>
     </div>
