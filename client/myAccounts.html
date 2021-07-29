@@ -1,4 +1,7 @@
 <template name="myAccounts">
+    {{#if currentUser}}
+        <button class="js-logout">Log out</button>
+    {{/if}}
     <div class="row justify-content-around">
         {{#each theProfiles}}
             <div class="col-lg-4 my-3" id={{_id}}>

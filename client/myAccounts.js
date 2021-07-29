@@ -96,6 +96,9 @@ Template.myAccounts.events({
                 $('#editage').val("");
                 $('#editModal').modal('hide');
         }
-    }       
+    },
+        'click .js-logout'(){
+            AccountsTemplates.logout();
+        }      
     
 });
