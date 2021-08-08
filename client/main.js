@@ -23,6 +23,7 @@ import './filter.html';
 import './filter.js';
 
 import './signInForm.html';
+import './signInForm.js';
 
     Meteor.subscribe("profData");
 
