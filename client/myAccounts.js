@@ -11,6 +11,12 @@ Template.myAccounts.helpers({
         }
         
         
+    },  
+    isOwner(){
+        if(this.pOwn == Meteor.userId())
+            return true;
+        else
+            return false;
     }
 });
 

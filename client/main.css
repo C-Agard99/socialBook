@@ -24,6 +24,19 @@ p-frame img{
 .invalidWarn{
     border: 2px solid #dc3545 !important;
 }
+.js-delete, .js-edit, .js-view{
+    cursor: pointer;
+    font-size: 1.5em;
+}
+.js-delete{
+    color: #dc3545;
+}
+.js-edit{
+    color: #bfd3c0; 
+}
+.js-view{
+    color: #164bbd; 
+}
 .btn-default{
     border: 4px solid rgb(61, 129, 238) !important;
 }
