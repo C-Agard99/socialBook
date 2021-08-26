@@ -28,6 +28,5 @@ import './signInForm.js';
 
 import './navBar.html';
 
-    Meteor.subscribe("profData");
-
-    
+import './viewProfile.html';
+import './viewProfile.js';
