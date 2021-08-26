@@ -30,3 +30,6 @@ import './navBar.html';
 
 import './viewProfile.html';
 import './viewProfile.js';
+
+import './randProfile.html';
+import './randProfile.js';
